@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Fitness and Health</string>
+    <string name="food">Food</string>
+    <string name="fitness">Fitness</string>
 </resources>
