@@ -20,12 +20,26 @@ import androidx.compose.ui.layout.AlignmentLine
 import androidx.compose.ui.layout.HorizontalAlignmentLine
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
+//import androidx.compose.foundation.layout.FlowRowScopeInstance.align
 import androidx.compose.foundation.layout.height
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material3.TextField
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.focus.focusModifier
+import kotlin.math.pow
 import com.example.fitnessandhealth.ui.theme.FitnessAndHealthTheme
+import java.text.NumberFormat
+import java.text.DecimalFormat
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +55,7 @@ class MainActivity : ComponentActivity() {
 @Preview
 @Composable
 fun HealthFitnessApp() {
+    //NumberField()
     MessageText(message = "\t\t\t\tWelcome!\n\nFITNESS & HEALTH")
     MainMenu()
 }
@@ -56,7 +71,8 @@ fun MessageText(message: String, modifier: Modifier = Modifier) {
         )
         Text(
             modifier = Modifier,
-            text = message
+            text = message,
+            fontSize = 18.sp
         )
     }
 }
@@ -64,7 +80,7 @@ fun MessageText(message: String, modifier: Modifier = Modifier) {
 @Composable
 fun MainMenu(modifier: Modifier = Modifier) {
     Row(
-        modifier = modifier.fillMaxSize(),
+        modifier = modifier.padding(16.dp).fillMaxSize(),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column (
@@ -98,4 +114,56 @@ fun MainMenu(modifier: Modifier = Modifier) {
             }
         }
     }
+}
+
+@Composable
+private fun calculateBMI(pounds: Double, inches: Double): String {
+    val bodyMassIndex = pounds * 703 / inches.pow(2.0)
+    val decimalFormat = DecimalFormat("#.##")
+    return decimalFormat.format(bodyMassIndex)
+}
+
+@Composable
+fun NumberField() {
+    var poundsInput by remember {mutableStateOf("")}
+    var inchesInput by remember {mutableStateOf("")}
+
+    val pounds = poundsInput.toDoubleOrNull() ?: 0.0
+    val inches = inchesInput.toDoubleOrNull() ?: 0.0
+
+    val bodyMassIndex = calculateBMI(pounds, inches)
+
+    Column(modifier = Modifier.padding(16.dp)) {
+        Text(
+            text = stringResource(R.string.calculate_bmi),
+            modifier = Modifier
+                .padding(bottom = 16.dp, top = 40.dp)
+        )
+        Spacer(modifier = Modifier.height(15.dp))
+        TextField(
+            label = {Text(stringResource(R.string.pounds))},
+            value = poundsInput,
+            onValueChange = {poundsInput = it},
+            modifier = Modifier.fillMaxWidth()
+        )
+        Spacer(modifier = Modifier.height(15.dp))
+        TextField(
+            label = { Text(stringResource(R.string.inches)) },
+            value = inchesInput,
+            onValueChange = {inchesInput = it},
+            modifier = Modifier.fillMaxWidth()
+        )
+        Spacer(modifier = Modifier.height(15.dp))
+        Text(text = stringResource(R.string.body_mass_index, bodyMassIndex))
+    }
+}
+
+@Composable
+fun FoodRecommendation() {
+
+}
+
+@Composable
+fun FitnessRecommendation() {
+
 }

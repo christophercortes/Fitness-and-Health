@@ -2,4 +2,8 @@
     <string name="app_name">Fitness and Health</string>
     <string name="food">Food</string>
     <string name="fitness">Fitness</string>
+    <string name="calculate_bmi">Calculate BMI (Body Mass Index)</string>
+    <string name="pounds">lbs</string>
+    <string name="inches">in</string>
+    <string name="body_mass_index">Body Mass Index: %1s</string>
 </resources>
