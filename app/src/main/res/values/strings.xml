@@ -6,4 +6,22 @@
     <string name="pounds">lbs</string>
     <string name="inches">in</string>
     <string name="body_mass_index">Body Mass Index: %1s</string>
+    <string name="food_recommendation">How Much Whole Grain is Enough?</string>
+    <string name="foodrecommedeating">Experts recommend eating six serving of grain per day, at leat three of which are whole grain.</string>
+    <string name="food_recommendation1">1 cup oatmeal 2 servings of whole grain</string>
+    <string name="food_recommendation2">A sandwich 2 servings of whole grain</string>
+    <string name="food_recommendation3">½ cup brown rice 1 serving of whole grain</string>
+    <string name="food_recommendation4">1 whole wheat English muffin 2 servings whole grain</string>
+    <string name="food_recommendation5">3 cups popcorn 1 serving of whole grain</string>
+    <string name="food_recommendation6">1 cup 50% whole grain pasta 1 servings of whole grain</string>
+    <string name="food_recommendation7">1 cup whole grain cereal 1 servings of whole grain</string>
+    <string name="food_recommendation8">½ round whole wheat pita 1 servings of whole grain</string>
+    <string name="food_recommendation9">1 cup cooked quinoa 2 servings of whole grain</string>
+    <string name="fitness_recommendation">""</string>
+    <string name="fitness_recommendation1">"Moderate-intensity aerobic activity (such as brisk walking) for 150 minutes every week"</string>
+    <string name="fitness_recommendation2">"Vigorous-intensity aerobic activity (such as jogging or running) for 75 minutes (1 hour and 15 minutes) every week"</string>
+    <string name="fitness_recommendation3">"An equivalent mix of moderate-and vigorous-intensity aerobic activity on 2 or more days a week"</string>
+    <string name="fitness_recommendation4">"Muscle-strengthening activities on 2 more days a week that work all major muscle groups (legs, hips, back, abdomen, chest, shoulder, and arms)"</string>
+    <string name="fitness_recommendation5">"Muscle-strengthening activities on 2 more days a week that work all major muscle groups (legs, hips, back, abdomen, chest, shoulder, and arms)"</string>
+    <string name="fitness_recommendation6">"Muscle-strengthening activities on 2 more days a week that work all major muscle groups (legs, hips, back, abdomen, chest, shoulder, and arms)"</string>
 </resources>
