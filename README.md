@@ -18,9 +18,8 @@ These libraries are user-friendly to optimize their experience navigating the An
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [W3schools](https://www.w3schools.com/kotlin/index.php)
+* [Google for Developers](https://developer.android.com/courses/android-basics-compose/course)
 
 # Future Work
 
