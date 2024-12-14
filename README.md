@@ -7,9 +7,7 @@ FITNESS & HEALTH also provide important food recommendations for eating and exer
 
 The purpose of developing FITNESS & HEALTH was to contribute simple tips to improve physical health conditions to anyone who wants to make changes in their lives.
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the app running and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.youtube.com/watch?v=n4gMw9QL8wQ)
 
 # Development Environment
 
