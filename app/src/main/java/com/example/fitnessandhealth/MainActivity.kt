@@ -52,12 +52,14 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+//Main composable function called
 @Preview
 @Composable
 fun HealthFitnessApp() {
     MainMenu()
 }
 
+//Welcome message composable function
 @Composable
 fun MessageText(message: String, modifier: Modifier = Modifier) {
     Column(
@@ -75,6 +77,7 @@ fun MessageText(message: String, modifier: Modifier = Modifier) {
     }
 }
 
+//Main composable function
 @Composable
 fun MainMenu(modifier: Modifier = Modifier) {
     //MessageText(message = "\t\t\t\tWelcome!\n\nFITNESS & HEALTH")
@@ -135,6 +138,7 @@ fun MainMenu(modifier: Modifier = Modifier) {
     }
 }
 
+//composable function that implements math operation to calculate BMI
 @Composable
 private fun calculateBMI(pounds: Double, inches: Double): String {
     val bodyMassIndex = pounds * 703 / inches.pow(2.0)
@@ -142,6 +146,7 @@ private fun calculateBMI(pounds: Double, inches: Double): String {
     return decimalFormat.format(bodyMassIndex)
 }
 
+//NumberField composable function that provides the Card function to display the BMI
 @Composable
 fun NumberField() {
     var poundsInput by remember { mutableStateOf("") }
@@ -199,6 +204,7 @@ fun NumberFieldPreview() {
     NumberField()
 }
 
+//Food list composable function
 @Composable
 fun FoodList(foodList: List<FoodRecommendation>, modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
@@ -211,6 +217,7 @@ fun FoodList(foodList: List<FoodRecommendation>, modifier: Modifier = Modifier) 
     }
 }
 
+//Fitness list composable function
 @Composable
 fun FitnessList(fitnessList: List<FitnessRecommendation>, modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
@@ -223,6 +230,7 @@ fun FitnessList(fitnessList: List<FitnessRecommendation>, modifier: Modifier = M
     }
 }
 
+//Food card composable function
 @Composable
 fun FoodRecommendationCard(foodRecommendation: FoodRecommendation, modifier: Modifier = Modifier) {
     Card(modifier = modifier) {
@@ -245,6 +253,7 @@ fun FoodRecommendationCard(foodRecommendation: FoodRecommendation, modifier: Mod
     }
 }
 
+//Fitness card composable function
 @Composable
 fun FitnessRecommendationCard(
     fitnessRecommendation: FitnessRecommendation,
